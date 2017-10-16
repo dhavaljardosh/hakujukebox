@@ -38,20 +38,23 @@ class App extends Component{
   render(){
       return (
         <div>
-        <div className="left-controller" onClick={this.scrollLeft}>
-          <i className="material-icons" style={{
-            padding: '8px'
-          }}>arrow_back</i>
+          <div style={{position:'relative'}}>
+            <div className="left-controller" onClick={this.scrollLeft} style={{zIndex:1}}>
+              <i className="material-icons" style={{
+                padding: '8px'
+              }}>arrow_back</i>
+              </div>
+              <Carousel
+               albums={this.state.albums}
+               onAlbumSelect={selectedAlbum => this.updatePlayList(selectedAlbum)}
+               />
+               <div className="right-controller" onClick={this.scrollRight}>
+                 <i className="material-icons" style={{
+                   padding: '8px'
+                 }}>arrow_forward</i>
+               </div>
           </div>
-          <Carousel
-           albums={this.state.albums}
-           onAlbumSelect={selectedAlbum => this.updatePlayList(selectedAlbum)}
-           />
-           <div className="right-controller" onClick={this.scrollRight}>
-             <i className="material-icons" style={{
-               padding: '8px'
-             }}>arrow_forward</i>
-           </div>
+
           <PlayList playlist={this.state.playlist} />
         </div>
       );

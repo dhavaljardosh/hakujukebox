@@ -4,7 +4,22 @@ import PlayListItem from './playlist_item';
 const PlayList= (props) => {
 
     if(props.playlist.length<=0){
-      return <div>Loading Playlist....</div>;
+      return <div className = "preloader-wrapper big active center playlist-loader" >
+        <div className="spinner-layer spinner-blue">
+          <div className="circle-clipper left">
+            <div className="circle">
+            </div>
+          </div>
+        <div className="gap-patch">
+          <div className="circle">
+          </div>
+        </div>
+        <div className="circle-clipper right">
+              <div className="circle">
+              </div>
+        </div>
+      </div>
+    </div>;
     }
 
     const playListItems=props.playlist.map((song) =>{

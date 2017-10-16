@@ -34,7 +34,7 @@ nav{
 }
 
 .carousel{
-  margin-top:-50px;
+  margin-top:-30px;
   height:360px;
   padding:0px;
 }
@@ -63,7 +63,7 @@ nav{
   position: absolute;
   color: #DDDDDD;
   left:10%;
-  bottom:70%;
+  bottom:40%;
 }
 
 .right-controller{
@@ -74,7 +74,7 @@ nav{
   position: absolute;
   color: #DDDDDD;
   right:10%;
-  bottom:70%;
+  bottom:40%;
 }
 
 .left-controller:hover, .right-controller:hover{
@@ -107,22 +107,40 @@ nav{
   overflow-y: scroll;
 }
 
-a.collection-item{
+.collection a.collection-item{
   text-decoration: none;
   font-size: 10;
   font-weight:500;
+  color: black;
+}
+
+.collection a.collection-item:hover{
+  cursor: pointer;
 }
 a.collection-item p{
   margin: 0px;
 }
 
+.songName{
+  color:#00698C;
+}
 
-.collection a.collection-item .songName:hover{
-  color: inherit;
+.collection a.collection-item:hover .songName{
+  color: white;
 }
 
 .collection a.collection-item:not(.active):hover{
   background-color: #0085B2;
+  color:white;
+}
+span.badge.new{
+  background-color: #DDD;
+  color:black;
+  width:70px;
+}
+
+.collection a.collection-item:not(.active):hover span.badge.new{
+  background-color: #90B9C9;
   color:white;
 }
 
@@ -131,16 +149,15 @@ a.collection-item p{
   background-color: #0085B2;
 }
 
-.collection a.collection-item .star{
-  color: blue;
+.carousel-item-loader{
+  position: absolute;
+  top:40px;
+  left:45%;
 }
-.collection a.collection-item:hover{
-  cursor: pointer;
-  color: 'blue';
-}
-
-.xyz{
-  display:inline;
+.playlist-loader{
+  position: absolute;
+  bottom:40%;
+  left:47%;
 }
 
 .indicators{

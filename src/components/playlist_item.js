@@ -37,7 +37,7 @@ class PlayListItem extends Component{
             <ReactTooltip place="top" type="dark" effect="solid"/>
             </div>
             <div style={{flex:7,margin:'auto'}}>
-              <p style={{fontWeight:'bolder'}}>{this.props.song.song_name}</p>
+              <p className="songName" style={{fontWeight:'bolder'}}>{this.props.song.song_name}</p>
             </div>
             <div style={{flex:2,margin:'auto'}}>
             {this.props.song.song_label!==undefined &&
