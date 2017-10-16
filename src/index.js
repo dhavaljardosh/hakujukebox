@@ -15,8 +15,7 @@ class App extends Component{
     this.albumSearch();
   }
   albumSearch(){
-    axios.get('https://cors-anywhere.herokuapp.com/https://stg-resque.hakuapp.com/albums.json')
-       .then((response) => {
+    axios.get('https://cors-anywhere.herokuapp.com/https://stg-resque.hakuapp.com/albums.json',{headers: {'Access-Control-Allow-Origin': '*'}}).then((response) => {
           this.setState({albums: response.data});
           this.updatePlayList(this.state.albums[0]);
         });
@@ -24,8 +23,7 @@ class App extends Component{
 
   updatePlayList(album){
     //console.log(album);
-    console.log(`https://cors-anywhere.herokuapp.com/https://stg-resque.hakuapp.com/songs.json?album_id=${album.id}`);
-    axios.get(`https://cors-anywhere.herokuapp.com/https://stg-resque.hakuapp.com/songs.json?album_id=${album.id}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://stg-resque.hakuapp.com/songs.json?album_id=${album.id}`,{headers: {'Access-Control-Allow-Origin': '*'}})
       .then(response => this.setState({playlist: response.data}));
   }
 
