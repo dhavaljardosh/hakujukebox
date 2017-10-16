@@ -1,0 +1,148 @@
+body{
+  text-transform: uppercase;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+nav{
+  background-color: #3F90C4;
+}
+
+.carousel{
+  margin-top:-50px;
+  height:360px;
+  padding:0px;
+}
+
+.carousel .carousel-item{
+  height: 270px;
+  background-color: white;
+  text-decoration: none;
+}
+.carousel .carousel-item img{
+  /*width:150px;*/
+  margin: auto;
+}
+
+.carousel .carousel-item.active{
+  background-color: #0085B2;
+  color: white;
+  text-decoration: none;
+}
+
+.left-controller{
+  width: 40px;
+  height:40px;
+  border:1px solid #DDDDDD;
+  border-radius: 5px;
+  position: absolute;
+  color: #DDDDDD;
+  left:10%;
+  bottom:70%;
+}
+
+.right-controller{
+  width: 40px;
+  height:40px;
+  border:1px solid #DDDDDD;
+  border-radius: 5px;
+  position: absolute;
+  color: #DDDDDD;
+  right:10%;
+  bottom:70%;
+}
+
+.left-controller:hover, .right-controller:hover{
+  background-color: #0085B2;
+  cursor: pointer;
+  color:white;
+}
+
+.card{
+  height: inherit;
+  background-color: inherit;
+  padding: 10px;
+}
+
+.singer{
+  margin: auto;
+  font-size: 12px;
+  text-align: center;
+}
+
+.album{
+  font-size: 16px;
+  margin: 0px;
+  text-align: center;
+}
+
+.collection{
+  margin: auto;
+  margin-top: 10px;
+  overflow-y: scroll;
+}
+
+a.collection-item{
+  text-decoration: none;
+  font-size: 10;
+  font-weight:500;
+}
+a.collection-item p{
+  margin: 0px;
+}
+
+
+.collection a.collection-item .songName:hover{
+  color: inherit;
+}
+
+.collection a.collection-item:not(.active):hover{
+  background-color: #0085B2;
+  color:white;
+}
+
+.collection .collection-item.active{
+  cursor: pointer;
+  background-color: #0085B2;
+}
+
+.collection a.collection-item .star{
+  color: blue;
+}
+.collection a.collection-item:hover{
+  cursor: pointer;
+  color: 'blue';
+}
+
+.xyz{
+  display:inline;
+}
+
+.indicators{
+  display: none;
+}
