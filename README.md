@@ -8,3 +8,4 @@ Initial Setup
 Technologies used:
 1. CSS Framework : Materialize CSS(http://materializecss.com/)
 2. Request from API npm package: axios(https://www.npmjs.com/package/axios) 
+3. Tool Tip npm package: React Tool Tip(https://www.npmjs.com/package/react-tooltip)
